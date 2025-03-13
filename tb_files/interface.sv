@@ -1,10 +1,10 @@
 interface intf;
   
-  logic [7:0] a;
-  logic [7:0] b; 
-  logic sign_a; 
-  logic sign_b;
-  logic  sign;
-  logic  [8:0] result;
-  
+  logic [3:0] A_mag;
+  logic [3:0] B_mag;
+  logic       A_sign;
+  logic       B_sign;
+  logic [4:0] Out_mag;     
+  logic       Out_sign;  
+
 endinterface

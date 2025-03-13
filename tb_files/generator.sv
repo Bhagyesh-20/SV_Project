@@ -11,7 +11,7 @@ class generator;
     for(int i=0;i<100;i++)begin
             assert(gen2drv.randomize()) else $display("Randomization Failed");
             mbx.put(gen2drv.copy);
-            $display("[GEN]: DATA SENT");
+            $display("[GEN]: DATA SENT!");
             gen2drv.display();
             #20;
         end

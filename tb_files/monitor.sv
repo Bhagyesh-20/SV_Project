@@ -10,15 +10,15 @@ class monitor;
   
   task main();
     forever begin
-      mon2scb.a = inf.a;
-      mon2scb.b = inf.b;
-      mon2scb.sign_a = inf.sign_a;
-      mon2scb.sign_b = inf.sign_b;
+      mon2scb.A_mag = inf.A_mag;
+      mon2scb.B_mag = inf.B_mag;
+      mon2scb.A_sign = inf.A_sign;
+      mon2scb.B_sign = inf.B_sign;
       #10;
-      mon2scb.sign = inf.sign;
-      mon2scb.result = inf.result;
+      mon2scb.Out_sign = inf.Out_sign;
+      mon2scb.Out_mag = inf.Out_mag;
       mbx.put(mon2scb);
-      $display("[MON] : DATA RCVD a: %0d | b: %0d| signa: %0d|signb: %0d|sign: %0d|result: %0d", mon2scb.a,mon2scb.b,mon2scb.sign_a,mon2scb.sign_b,mon2scb.sign,mon2scb.result);
+      $display("[MON] : DATA RCVD a: %0d | b: %0d| signa: %0d|signb: %0d|sign: %0d|result: %0d", mon2scb.A_mag,mon2scb.B_mag,mon2scb.A_sign,mon2scb.B_sign,mon2scb.Out_sign,mon2scb.Out_mag);
 
     end
   endtask

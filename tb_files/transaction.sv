@@ -1,12 +1,12 @@
 class transaction;
   //inputs
-    randc bit [7:0] a;
-    randc bit [7:0] b; 
-    randc bit sign_a; 
-    randc bit sign_b;
+    randc bit [3:0] A_mag;
+    randc bit [3:0] B_mag; 
+    randc bit A_sign; 
+    randc bit B_sign;
   //outputs
-	bit sign;
-  	bit [8:0] result; 
+	bit Out_sign;
+  bit [5:0] Out_mag; 
   
 	function transaction copy();
         copy = new();
